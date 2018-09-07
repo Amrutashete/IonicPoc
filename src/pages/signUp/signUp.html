@@ -1,0 +1,45 @@
+<ion-header >
+    <ion-navbar color="primary">
+      <ion-title>SignUp</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <form #f="ngForm" (ngSubmit)="onSignUp(f)">
+      <ion-list>
+         <ion-item>
+            <ion-label floating> Enter Username</ion-label>
+            <ion-input 
+            name="email"
+            type="text" 
+            required
+            ngModel></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label floating>Enter Your Password</ion-label>
+            <ion-input 
+            name="password"
+            type="password" 
+            required
+            ngModel></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-label floating>Re-Enter Your Password for confirmation</ion-label>
+              <ion-input 
+              type="Password" 
+              name="cPassword"
+              required
+              ngModel></ion-input>
+            </ion-item>
+        
+        </ion-list>
+          <button 
+          type="submit"
+          ion-button
+          color="primary">
+          Register</button>
+        </form>
+  </ion-content>
+  

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Settings
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="setDefaults()">
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>Category</ion-label>
+        <ion-select [(ngModel)]="category" name="categories">
+          <ion-option *ngFor="let category of categories" [value]="category">{{category}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Limit</ion-label>
+        <ion-select [(ngModel)]="limit" name="limits">
+          <ion-option *ngFor="let limit of limits" [value]="limit">{{limit}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <button ion-button type="submit" block>
+        Save Changes
+      </button>
+    </ion-list>
+    <button ion-button block clear round (click)="viewAbout()">
+      About</button>
+  </form>
+</ion-content>
